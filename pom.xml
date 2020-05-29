@@ -4,10 +4,11 @@
 
   <groupId>com.upcwangying.cloud.samples</groupId>
   <artifactId>samples-parent-archetype</artifactId>
-  <version>0.1.1-SNAPSHOT</version>
+  <version>0.1.0</version>
   <packaging>maven-archetype</packaging>
-
   <name>samples-parent-archetype</name>
+  <description>Spring Cloud Samples Archetype</description>
+  <url>https://cloud.upcwangying.com</url>
 
   <build>
     <extensions>
@@ -28,9 +29,67 @@
     </pluginManagement>
   </build>
 
-  <description>Spring Cloud Samples</description>
-
-  <url>https://cloud.upcwangying.com</url>
+  <profiles>
+    <profile>
+      <id>default</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>2.2.1</version>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>jar-no-fork</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>2.9.1</version>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.6</version>
+            <executions>
+              <execution>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+      <distributionManagement>
+        <snapshotRepository>
+          <id>oss</id>
+          <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+          <id>oss</id>
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+      </distributionManagement>
+    </profile>
+  </profiles>
 
   <developers>
     <developer>
@@ -44,12 +103,12 @@
   <licenses>
     <license>
       <name>MIT License</name>
-      <url>https://raw.githubusercontent.com/upcwangying/spring-cloud-samples/master/LICENSE.md</url>
+      <url>https://raw.githubusercontent.com/upcwangying/spring-cloud-samples-archtype/master/LICENSE.md</url>
     </license>
   </licenses>
 
   <scm>
-    <connection>https://github.com/upcwangying/spring-cloud-samples.git</connection>
-    <url>https://github.com/upcwangying/spring-cloud-samples</url>
+    <connection>https://github.com/upcwangying/spring-cloud-samples-archtype.git</connection>
+    <url>https://github.com/upcwangying/spring-cloud-samples-archtype</url>
   </scm>
 </project>
