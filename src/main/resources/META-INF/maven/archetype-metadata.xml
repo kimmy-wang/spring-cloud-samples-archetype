@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd" name="samples-parent"
+    xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <fileSets>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>.idea/libraries</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>.idea</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>.idea/copyright</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>samples/templates</directory>
+      <includes>
+        <include>**/*.txt</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>.idea</directory>
+      <includes>
+        <include>**/*.name</include>
+        <include>**/*.iml</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>samples/charts</directory>
+      <includes>
+        <include>**/*.gitkeep</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>samples</directory>
+      <includes>
+        <include>**/*.helmignore</include>
+        <include>**/*.yaml</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>samples/templates</directory>
+      <includes>
+        <include>**/*.tpl</include>
+        <include>**/*.yaml</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>.gitignore</include>
+        <include>.gitlab-ci.yml</include>
+        <include>CHANGELOG.md</include>
+        <include>CONTRIBUTING.md</include>
+        <include>Copyright.md</include>
+        <include>DEPLOY.md</include>
+        <include>docker-compose.yml</include>
+        <include>docker-swarm.yml</include>
+        <include>LICENSE.md</include>
+        <include>process.png</include>
+        <include>README.md</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+  <modules>
+    <module id="samples-core" dir="samples-core" name="samples-core">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.properties</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.gitignore</include>
+            <include>.gitlab-ci.yml</include>
+            <include>samples-core.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="samples-mdm" dir="samples-mdm" name="samples-mdm">
+      <fileSets>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.gitignore</include>
+            <include>.gitlab-ci.yml</include>
+            <include>README.md</include>
+            <include>samples-mdm.iml</include>
+            <include>samples_mdm.sql</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+      <modules>
+        <module id="mdm-common" dir="mdm-common" name="mdm-common">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.properties</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>.gitignore</include>
+                <include>mdm-common.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="mdm-client" dir="mdm-client" name="mdm-client">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.properties</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>.gitignore</include>
+                <include>mdm-client.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="mdm-server" dir="mdm-server" name="mdm-server">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.gitkeep</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.xml</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.yml</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/test/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>.gitignore</include>
+                <include>Dockerfile</include>
+                <include>mdm-server.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+      </modules>
+    </module>
+    <module id="samples-user" dir="samples-user" name="samples-user">
+      <fileSets>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.gitignore</include>
+            <include>.gitlab-ci.yml</include>
+            <include>README.md</include>
+            <include>samples-user.iml</include>
+            <include>samples_user.sql</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+      <modules>
+        <module id="user-common" dir="user-common" name="user-common">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.properties</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory>src/main/proto</directory>
+              <includes>
+                <include>**/*.proto</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>.gitignore</include>
+                <include>user-common.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="user-client" dir="user-client" name="user-client">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.properties</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>.gitignore</include>
+                <include>user-client.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="user-server" dir="user-server" name="user-server">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.xml</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.yml</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/test/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>.gitignore</include>
+                <include>Dockerfile</include>
+                <include>user-server.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+      </modules>
+    </module>
+    <module id="samples-product" dir="samples-product" name="samples-product">
+      <fileSets>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.gitignore</include>
+            <include>.gitlab-ci.yml</include>
+            <include>README.md</include>
+            <include>samples-product.iml</include>
+            <include>samples_product.sql</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+      <modules>
+        <module id="product-common" dir="product-common" name="product-common">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.properties</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>.gitignore</include>
+                <include>product-common.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="product-server" dir="product-server" name="product-server">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.yml</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/test/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory>src/test/resources</directory>
+              <includes>
+                <include>**/*.yml</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>.gitignore</include>
+                <include>Dockerfile</include>
+                <include>product-server.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="product-client" dir="product-client" name="product-client">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.properties</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>.gitignore</include>
+                <include>product-client.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+      </modules>
+    </module>
+    <module id="samples-order" dir="samples-order" name="samples-order">
+      <fileSets>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.gitignore</include>
+            <include>.gitlab-ci.yml</include>
+            <include>README.md</include>
+            <include>samples-order.iml</include>
+            <include>samples_order.sql</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+      <modules>
+        <module id="order-common" dir="order-common" name="order-common">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>.gitignore</include>
+                <include>order-common.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="order-client" dir="order-client" name="order-client">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.yml</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>.gitignore</include>
+                <include>order-client.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="order-server" dir="order-server" name="order-server">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.yml</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/test/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>.gitignore</include>
+                <include>Dockerfile</include>
+                <include>order-server.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+      </modules>
+    </module>
+    <module id="samples-bpm" dir="samples-bpm" name="samples-bpm">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.properties</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.gitignore</include>
+            <include>Dockerfile</include>
+            <include>README.md</include>
+            <include>samples-bpm.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="samples-admin" dir="samples-admin" name="samples-admin">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.yml</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.gitignore</include>
+            <include>.gitlab-ci.yml</include>
+            <include>Dockerfile</include>
+            <include>README.md</include>
+            <include>samples-admin.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="samples-data-process" dir="samples-data-process" name="samples-data-process">
+      <fileSets>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.gitignore</include>
+            <include>README.md</include>
+            <include>samples-data-process.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+      <modules>
+        <module id="data-process-batch" dir="data-process-batch" name="data-process-batch">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.properties</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/test/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>.gitignore</include>
+                <include>data-process-batch.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="data-process-streaming" dir="data-process-streaming" name="data-process-streaming">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.properties</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/test/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>.gitignore</include>
+                <include>data-process-streaming.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+      </modules>
+    </module>
+    <module id="samples-eureka" dir="samples-eureka" name="samples-eureka">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.yml</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.gitignore</include>
+            <include>.gitlab-ci.yml</include>
+            <include>Dockerfile</include>
+            <include>README.md</include>
+            <include>samples-eureka.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="samples-gateway" dir="samples-gateway" name="samples-gateway">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.json</include>
+            <include>**/*.yml</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.gitignore</include>
+            <include>Dockerfile</include>
+            <include>README.md</include>
+            <include>samples-gateway.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="samples-hystrix-dashboard" dir="samples-hystrix-dashboard" name="samples-hystrix-dashboard">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.yml</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.gitignore</include>
+            <include>.gitlab-ci.yml</include>
+            <include>Dockerfile</include>
+            <include>README.md</include>
+            <include>samples-hystrix-dashboard.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="samples-zuul" dir="samples-zuul" name="samples-zuul">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.yml</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.gitignore</include>
+            <include>.gitlab-ci.yml</include>
+            <include>Dockerfile</include>
+            <include>README.md</include>
+            <include>samples-zuul.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+  </modules>
+</archetype-descriptor>

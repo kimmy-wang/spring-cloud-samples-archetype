@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.upcwangying.cloud.samples</groupId>
+  <artifactId>samples-parent-archetype</artifactId>
+  <version>0.1.1-SNAPSHOT</version>
+  <packaging>maven-archetype</packaging>
+
+  <name>samples-parent-archetype</name>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>3.1.2</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>3.1.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <description>Spring Cloud Samples</description>
+
+  <url>https://cloud.upcwangying.com</url>
+
+  <developers>
+    <developer>
+      <name>Ying Wang</name>
+      <email>upcwangying@gmail.com</email>
+      <url>https://github.com/upcwangying</url>
+      <timezone>+8</timezone>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://raw.githubusercontent.com/upcwangying/spring-cloud-samples/master/LICENSE.md</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>https://github.com/upcwangying/spring-cloud-samples.git</connection>
+    <url>https://github.com/upcwangying/spring-cloud-samples</url>
+  </scm>
+</project>
