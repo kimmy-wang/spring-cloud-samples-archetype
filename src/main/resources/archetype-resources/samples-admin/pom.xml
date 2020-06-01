@@ -110,7 +110,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.upcwangying.cloud.samples.admin.SamplesAdminApplication</mainClass>
+                    <mainClass>${groupId}.admin.SamplesAdminApplication</mainClass>
                 </configuration>
             </plugin>
 

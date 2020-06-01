@@ -32,7 +32,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.upcwangying.cloud.samples.user</groupId>
+                <groupId>${groupId}.user</groupId>
                 <artifactId>user-client</artifactId>
                 <version>${user-client.version}</version>
             </dependency>
@@ -54,7 +54,7 @@
             </dependency>
 
             <dependency>
-                <groupId>com.upcwangying.cloud.samples</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>samples-core</artifactId>
                 <version>${samples-core.version}</version>
             </dependency>

@@ -82,7 +82,7 @@
             <artifactId>swagger-spring-boot-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.upcwangying.cloud.samples</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>samples-core</artifactId>
         </dependency>
         <dependency>
@@ -109,7 +109,7 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>com.upcwangying.cloud.samples</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>samples-core</artifactId>
                 <version>${samples-core.version}</version>
             </dependency>

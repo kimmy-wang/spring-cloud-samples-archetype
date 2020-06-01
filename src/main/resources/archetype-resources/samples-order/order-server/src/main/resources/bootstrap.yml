@@ -83,7 +83,7 @@ ribbon:
 logging:
   level:
     org.springframework.cloud.openfeign: debug
-    com.upcwangying.cloud.samples.order.server.service.impl: debug
+    ${groupId}.order.server.service.impl: debug
 management:
   endpoints:
     web:

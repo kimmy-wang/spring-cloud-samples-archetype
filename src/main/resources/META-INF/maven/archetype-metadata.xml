@@ -4,34 +4,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <fileSets>
     <fileSet filtered="true" encoding="UTF-8">
-      <directory>.idea/libraries</directory>
-      <includes>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory>.idea</directory>
-      <includes>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory>.idea/copyright</directory>
-      <includes>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
       <directory>samples/templates</directory>
       <includes>
         <include>**/*.txt</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory>.idea</directory>
-      <includes>
-        <include>**/*.name</include>
-        <include>**/*.iml</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
@@ -97,7 +72,6 @@
           <includes>
             <include>.gitignore</include>
             <include>.gitlab-ci.yml</include>
-            <include>samples-core.iml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -110,7 +84,6 @@
             <include>.gitignore</include>
             <include>.gitlab-ci.yml</include>
             <include>README.md</include>
-            <include>samples-mdm.iml</include>
             <include>samples_mdm.sql</include>
           </includes>
         </fileSet>
@@ -134,7 +107,6 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
-                <include>mdm-common.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -157,7 +129,6 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
-                <include>mdm-client.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -199,7 +170,6 @@
               <includes>
                 <include>.gitignore</include>
                 <include>Dockerfile</include>
-                <include>mdm-server.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -214,7 +184,6 @@
             <include>.gitignore</include>
             <include>.gitlab-ci.yml</include>
             <include>README.md</include>
-            <include>samples-user.iml</include>
             <include>samples_user.sql</include>
           </includes>
         </fileSet>
@@ -244,7 +213,6 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
-                <include>user-common.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -267,7 +235,6 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
-                <include>user-client.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -303,7 +270,6 @@
               <includes>
                 <include>.gitignore</include>
                 <include>Dockerfile</include>
-                <include>user-server.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -318,7 +284,6 @@
             <include>.gitignore</include>
             <include>.gitlab-ci.yml</include>
             <include>README.md</include>
-            <include>samples-product.iml</include>
             <include>samples_product.sql</include>
           </includes>
         </fileSet>
@@ -342,7 +307,6 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
-                <include>product-common.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -378,7 +342,6 @@
               <includes>
                 <include>.gitignore</include>
                 <include>Dockerfile</include>
-                <include>product-server.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -401,7 +364,6 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
-                <include>product-client.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -416,7 +378,6 @@
             <include>.gitignore</include>
             <include>.gitlab-ci.yml</include>
             <include>README.md</include>
-            <include>samples-order.iml</include>
             <include>samples_order.sql</include>
           </includes>
         </fileSet>
@@ -434,7 +395,6 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
-                <include>order-common.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -457,7 +417,6 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
-                <include>order-client.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -487,7 +446,6 @@
               <includes>
                 <include>.gitignore</include>
                 <include>Dockerfile</include>
-                <include>order-server.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -520,7 +478,6 @@
             <include>.gitignore</include>
             <include>Dockerfile</include>
             <include>README.md</include>
-            <include>samples-bpm.iml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -552,7 +509,6 @@
             <include>.gitlab-ci.yml</include>
             <include>Dockerfile</include>
             <include>README.md</include>
-            <include>samples-admin.iml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -564,7 +520,6 @@
           <includes>
             <include>.gitignore</include>
             <include>README.md</include>
-            <include>samples-data-process.iml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -593,7 +548,6 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
-                <include>data-process-batch.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -622,7 +576,6 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
-                <include>data-process-streaming.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -656,7 +609,6 @@
             <include>.gitlab-ci.yml</include>
             <include>Dockerfile</include>
             <include>README.md</include>
-            <include>samples-eureka.iml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -688,7 +640,6 @@
             <include>.gitignore</include>
             <include>Dockerfile</include>
             <include>README.md</include>
-            <include>samples-gateway.iml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -720,7 +671,6 @@
             <include>.gitlab-ci.yml</include>
             <include>Dockerfile</include>
             <include>README.md</include>
-            <include>samples-hystrix-dashboard.iml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -752,7 +702,6 @@
             <include>.gitlab-ci.yml</include>
             <include>Dockerfile</include>
             <include>README.md</include>
-            <include>samples-zuul.iml</include>
           </includes>
         </fileSet>
       </fileSets>
