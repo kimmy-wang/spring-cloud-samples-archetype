@@ -58,13 +58,13 @@
             </dependency>
 
             <dependency>
-                <groupId>com.upcwangying.cloud.samples</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>samples-core</artifactId>
                 <version>${samples-core.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.upcwangying.cloud.samples.mdm</groupId>
+                <groupId>${groupId}.mdm</groupId>
                 <artifactId>mdm-common</artifactId>
                 <version>${mdm-client.version}</version>
             </dependency>

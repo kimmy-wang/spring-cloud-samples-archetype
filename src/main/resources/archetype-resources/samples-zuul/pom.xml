@@ -14,7 +14,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.upcwangying.cloud.samples.user</groupId>
+            <groupId>${groupId}.user</groupId>
             <artifactId>user-client</artifactId>
         </dependency>
 
@@ -187,7 +187,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.upcwangying.cloud.samples.zuul.SamplesZuulApplication</mainClass>
+                    <mainClass>${groupId}.zuul.SamplesZuulApplication</mainClass>
                 </configuration>
             </plugin>
 

@@ -52,12 +52,12 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>com.upcwangying.cloud.samples</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>samples-core</artifactId>
                 <version>${samples-core.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.upcwangying.cloud.samples.product</groupId>
+                <groupId>${groupId}.product</groupId>
                 <artifactId>product-common</artifactId>
                 <version>${product-client.version}</version>
             </dependency>

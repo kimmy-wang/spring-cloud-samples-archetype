@@ -19,7 +19,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.upcwangying.cloud.samples</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>samples-core</artifactId>
         </dependency>
 

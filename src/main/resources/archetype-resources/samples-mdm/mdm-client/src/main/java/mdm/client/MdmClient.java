@@ -29,7 +29,7 @@
 
 package ${package}.mdm.client;
 
-import ${package}.user.common.entity.PermissionOutput;
+import ${package}.mdm.common.entity.PermissionOutput;
 import ${package}.core.vo.ResultVO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;

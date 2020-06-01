@@ -14,7 +14,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.upcwangying.cloud.samples.product</groupId>
+            <groupId>${groupId}.product</groupId>
             <artifactId>product-common</artifactId>
         </dependency>
 
@@ -163,7 +163,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.upcwangying.cloud.samples.product.server.ProductServerApplication</mainClass>
+                    <mainClass>${groupId}.product.server.ProductServerApplication</mainClass>
                 </configuration>
             </plugin>
 

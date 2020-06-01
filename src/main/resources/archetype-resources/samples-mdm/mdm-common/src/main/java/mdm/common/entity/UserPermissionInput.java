@@ -29,7 +29,7 @@
 
 package ${package}.mdm.common.entity;
 
-import ${package}.user.common.validation.annotation.UserPermissionInputAnno;
+import ${package}.mdm.common.validation.annotation.UserPermissionInputAnno;
 
 import java.io.Serializable;
 

@@ -14,7 +14,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.upcwangying.cloud.samples.order</groupId>
+            <groupId>${groupId}.order</groupId>
             <artifactId>order-common</artifactId>
         </dependency>
         <dependency>

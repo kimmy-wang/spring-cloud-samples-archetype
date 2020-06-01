@@ -14,17 +14,17 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.upcwangying.cloud.samples</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>samples-core</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.upcwangying.cloud.samples.order</groupId>
+            <groupId>${groupId}.order</groupId>
             <artifactId>order-common</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.upcwangying.cloud.samples.product</groupId>
+            <groupId>${groupId}.product</groupId>
             <artifactId>product-client</artifactId>
         </dependency>
 
@@ -174,7 +174,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.upcwangying.cloud.samples.order.server.OrderServerApplication</mainClass>
+                    <mainClass>${groupId}.order.server.OrderServerApplication</mainClass>
                 </configuration>
             </plugin>
 
