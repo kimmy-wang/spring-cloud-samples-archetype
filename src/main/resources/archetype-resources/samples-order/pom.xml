@@ -46,7 +46,7 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>${groupId}.samples</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>samples-core</artifactId>
                 <version>${samples-core.version}</version>
             </dependency>
