@@ -16,7 +16,7 @@
         <java.version>1.8</java.version>
         <spring-cloud.version>Finchley.SR4</spring-cloud.version>
         <spring-cloud-alibaba.version>2.0.2.RELEASE</spring-cloud-alibaba.version>
-        <samples-core.version>0.1.0-SNAPSHOT</samples-core.version>
+        <samples-core.version>${version}</samples-core.version>
         <docker.image.prefix>registry.cn-qingdao.aliyuncs.com/upcwangying</docker.image.prefix>
     </properties>
 
