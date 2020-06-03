@@ -1,5 +1,6 @@
 # spring-cloud-samples-archetype
 
+![Maven Central](https://img.shields.io/maven-central/v/com.upcwangying.cloud.samples/samples-parent-archetype)
 
 ## Deploy
 
