@@ -30,6 +30,6 @@
 package ${package}.core.service;
 
 public interface IdempotentService {
-    boolean invoke();
+    boolean isIdempotent();
 }
 

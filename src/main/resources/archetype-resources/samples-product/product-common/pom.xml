@@ -8,7 +8,6 @@
     </parent>
     <groupId>${groupId}.product</groupId>
     <artifactId>${artifactId}</artifactId>
-    <version>${version}</version>
     <name>${artifactId}</name>
     <description>商品公用模块</description>
 
@@ -19,7 +18,7 @@
         </dependency>
 
         <dependency>
-            <groupId>${groupId}</groupId>
+            <groupId>com.upcwangying.cloud.samples</groupId>
             <artifactId>samples-core</artifactId>
         </dependency>
 
@@ -37,11 +36,6 @@
         <dependency>
             <groupId>io.github.openfeign.form</groupId>
             <artifactId>feign-form-spring</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
         </dependency>
 
         <dependency>

@@ -1,24 +1,33 @@
 spring:
+#  main:
+#    allow-bean-definition-overriding: true
   application:
     name: gateway
   cloud:
     gateway:
       enabled: true
-      routes:
-        # Add your routes here.
-        - id: aliyun_route
-          uri: https://www.aliyun.com/
-          predicates:
-            - Path=/product/**
-        - id: httpbin_route
-          uri: https://httpbin.org
-          predicates:
-            - Path=/httpbin/**
-          filters:
-            - RewritePath=/httpbin/(?<segment>.*), /$\{segment}
+      httpclient:
+        ssl:
+          use-insecure-trust-manager: true
+#          trusted-x509-certificates:
+#            - cert1.pem
+#            - cert2.pem
       discovery:
         locator:
           lower-case-service-id: true
+      routes:
+        - id: product_route
+          uri: lb://product
+          predicates:
+            - Path=/product/**
+          filters:
+            - StripPrefix=1
+        - id: order_route
+          uri: lb://order
+          predicates:
+            - Path=/order/**
+          filters:
+            - StripPrefix=1
 
     nacos:
       config:
@@ -26,20 +35,19 @@ spring:
         server-addr: ${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}
         username: nacos
         password: nacos
+        name: gateway-test
       discovery:
-        server-addr: ${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}
-        username: nacos
-        password: nacos
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+        username: ${spring.cloud.nacos.config.username}
+        password: ${spring.cloud.nacos.config.password}
 
     sentinel:
-      datasource.ds2.file:
-        file: "classpath: gateway.json"
-        ruleType: gw-flow
-      datasource.ds1.file:
-        file: "classpath: api.json"
+      datasource.ds1.nacos:
+        serverAddr: ${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}
+        dataId: gateway-api
         ruleType: gw-api-group
       transport:
-        dashboard: ${SENTINEL_DASHBOARD_HOST：127.0.0.1}:${SENTINEL_DASHBOARD_PORT:9091}
+        dashboard: ${SENTINEL_DASHBOARD_HOST:127.0.0.1}:${SENTINEL_DASHBOARD_PORT:8849}
       filter:
         enabled: true
       scg.fallback:
@@ -51,6 +59,23 @@ spring:
 
 server:
   port: ${SERVER_PORT:9090}
+  ssl:
+    enabled: true
+    key-alias: samples
+    key-password: samples
+    key-store: classpath:samples.jks
+    key-store-password: samples
+    key-store-type: JKS
+
+# 加密所需的salt(盐)
+jasypt:
+  encryptor:
+   password: testtesttest
+   iv-generator-classname: org.jasypt.iv.NoIvGenerator
+# 默认加密方式PBEWithMD5AndDES,可以更改为PBEWithMD5AndTripleDES
+   algorithm: PBEWithMD5AndDES
+#spring.datasource.username=ENC(FFS/1gsUddgqNFPu+jRqag==)
+#spring.datasource.password=ENC(k7aNofHMY0VqoyMw7LIMBQ==)
 
 #eureka:
 #  client:

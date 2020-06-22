@@ -29,7 +29,9 @@
 
 package ${package}.core.vo;
 
-public class ResultVO<T> {
+import java.io.Serializable;
+
+public class ResultVO<T> implements Serializable {
 
     private Integer code;
 

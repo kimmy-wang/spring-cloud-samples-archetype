@@ -4,7 +4,7 @@
 
   <groupId>com.upcwangying.cloud.samples</groupId>
   <artifactId>samples-parent-archetype</artifactId>
-  <version>0.2.2</version>
+  <version>0.3.0-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
   <name>samples-parent-archetype</name>
   <description>Spring Cloud Samples Archetype</description>

@@ -1,0 +1,40 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="${package}.oss.core.dao.ServiceAuthMapper">
+    <resultMap id="ServiceAuthResultMap" type="${package}.oss.core.entity.ServiceAuth">
+        <result column="BUCKET_NAME" property="bucketName"/>
+        <result column="TARGET_TOKEN" property="targetToken"/>
+        <result column="AUTH_TIME" property="authTime"/>
+    </resultMap>
+    <insert id="addAuth">
+    insert into SERVICE_AUTH
+    (BUCKET_NAME,TARGET_TOKEN,AUTH_TIME)
+    values
+    (${symbol_pound}{auth.bucketName},${symbol_pound}{auth.targetToken},${symbol_pound}{auth.authTime})
+  </insert>
+
+    <delete id="deleteAuth">
+    delete from SERVICE_AUTH
+    where BUCKET_NAME=${symbol_pound}{bucket} AND TARGET_TOKEN=${symbol_pound}{token}
+  </delete>
+
+    <delete id="deleteAuthByToken">
+    delete from SERVICE_AUTH
+    where TARGET_TOKEN=${symbol_pound}{token}
+  </delete>
+
+    <delete id="deleteAuthByBucket">
+    delete from SERVICE_AUTH
+    where BUCKET_NAME=${symbol_pound}{bucket}
+  </delete>
+
+    <select id="getAuth" resultMap="ServiceAuthResultMap">
+    select * from SERVICE_AUTH where
+    TARGET_TOKEN=${symbol_pound}{token} AND BUCKET_NAME=${symbol_pound}{bucket}
+  </select>
+</mapper>

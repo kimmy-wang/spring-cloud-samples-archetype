@@ -36,7 +36,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
 @EnableZuulProxy
-@EnableFeignClients(basePackages = {"${package}.user.client"})
+@EnableFeignClients(basePackages = {"${package}.user.feign"})
 @ComponentScan(basePackages = {"${package}"})
 @SpringCloudApplication
 public class SamplesZuulApplication {

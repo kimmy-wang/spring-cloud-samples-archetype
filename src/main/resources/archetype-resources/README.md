@@ -1,12 +1,15 @@
 ## Spring Cloud Samples
 
+![Maven Central](https://img.shields.io/maven-central/v/com.upcwangying.cloud.samples/samples-parent)
+![GitHub](https://img.shields.io/github/license/upcwangying/spring-cloud-samples)
+
 这是一个Spring Cloud 样例项目
 
 ## 项目依赖
 
-- Spring Boot (2.0.9.RELEASE)
-- Spring Cloud (Finchley.SR4)
-- Spring Cloud Alibaba (2.0.2.RELEASE)
+- Spring Boot (2.1.15.RELEASE)
+- Spring Cloud (Greenwich.SR6)
+- Spring Cloud Alibaba (2.1.2.RELEASE)
 
 ## Seata
 
@@ -66,7 +69,7 @@ RateLimitPreFilter(限流) -> GrayFilter(灰度发布) -> AuthFilter(认证) -> 
 ## Maven dockerfile plugin
 
 ```text
-docker login  -u username -p userpasswd 192.168.88.87
+docker login  -u yourusername -p yourpassword registry.cn-qingdao.aliyuncs.com
 
 mvn package -DskipTests dockerfile:build dockerfile:push
 
@@ -99,7 +102,7 @@ TODO...
 
 ## 测试用例
 
-测试用例在spring-cloud-samples/samples-product/product-server/src/test目录下
+测试用例在spring-cloud-samples/samples-product/product-web/src/test目录下
 
 注意
 
@@ -149,14 +152,42 @@ Dmaven.test.skip=true, 不执行测试用例，也不编译测试用例类
 </plugin> 
 ```
 
+## Maven archetype
+
+1. 在项目根目录下运行`mvn archetype:create-from-project`
+
+2. 生成archetype项目工程, 在`target/generated-sources/archetype`目录下
+
+## Maven Archetype 配置
+
+
+1. 安装`Maven Archetype Catalog`插件
+
+2. 依次进入设置目录`Settings->Build,Execution,Deployment->Build Tools->Maven Archetype Catalogs`
+
+3. 新增http://192.168.88.82:8081/repository/maven-snapshots/archetype-catalog.xml
+
+4. 新建Maven工程, 勾选`Create from archetype`即可, 其余操作不变.
+
+## Deploy
+
+`mvn clean install deploy -P release -Dgpg.passphrase=yourpassword -Ddockerfile.skip=true -DskipTests`
+
+`mvn clean install package -DskipTests -Ddockerfile.push.skip=true`
+
+`mvn clean deploy -projects fundebug-java,fundebug-spring -P release -Dgpg.passphrase=yourpassword -Ddockerfile.skip=true -DskipTests`
+
+`keytool -genkey -alias samples -keypass samples -keyalg RSA -keysize 2048 -validity 30 -keystore samples.jks -storepass samples`
+
 ## TODO
 
 - [X] Netflix Eureka切换成Nacos Discovery
 - [X] Spring Cloud Config切换成Nacos Config
 - [X] 原samples-gateway模块更改为samples-zuul模块, 基于Netflix Zuul
-- [ ] 新增samples-gateway模块, 基于Spring Cloud Gateway
-- [ ] Feign切换成gRPC
+- [X] 新增samples-gateway模块, 基于Spring Cloud Gateway
+- [X] Feign切换成Dubbo
 - [ ] Netflix Hystrix切换成Alibaba Sentinel
+- [ ] Samples bpm集成Activiti
 - [ ] 集成分布式事务中间件Alibaba Seata
 - [ ] Zipkin切换成Skywalking
-- [ ] Samples bpm集成Activiti
+- [ ] Feign切换成gRPC

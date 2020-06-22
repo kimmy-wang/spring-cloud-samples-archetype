@@ -33,7 +33,7 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import ${package}.core.exception.FallbackException;
 import ${package}.core.utils.ResultVOUtils;
 import ${package}.core.vo.ResultVO;
-import ${package}.user.client.UserClient;
+import ${package}.user.feign.UserClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

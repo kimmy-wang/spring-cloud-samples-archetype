@@ -1,0 +1,56 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="${package}.oss.server.dao.BucketMapper">
+    <resultMap id="BucketResultMap" type="${package}.oss.common.BucketModel">
+        <id column="BUCKET_ID" property="bucketId"/>
+        <result column="BUCKET_NAME" property="bucketName"/>
+        <result column="DETAIL" property="detail"/>
+        <result column="CREATOR" property="creator"/>
+        <result column="CREATE_TIME" property="createTime"/>
+    </resultMap>
+
+    <insert id="addBucket">
+    insert into HOS_BUCKET
+    (BUCKET_ID,BUCKET_NAME,CREATOR,DETAIL,CREATE_TIME)
+    values
+    (${symbol_pound}{bucket.bucketId},${symbol_pound}{bucket.bucketName},${symbol_pound}{bucket.creator}
+    ,${symbol_pound}{bucket.detail},${symbol_pound}{bucket.createTime})
+  </insert>
+
+    <update id="updateBucket">
+        update HOS_BUCKET set BUCKET_NAME=${symbol_pound}{bucketName}
+        <if test="detail!=null and detail!='' ">
+            , DETAIL=${symbol_pound}{detail}
+        </if>
+        where BUCKET_NAME=${symbol_pound}{bucketName}
+    </update>
+
+    <delete id="deleteBucket">
+    delete from HOS_BUCKET where BUCKET_NAME=${symbol_pound}{bucketName}
+  </delete>
+
+    <select id="getBucket" resultMap="BucketResultMap">
+    select * from HOS_BUCKET where
+    BUCKET_ID=${symbol_pound}{bucketId}
+  </select>
+
+    <select id="getBucketByName" resultMap="BucketResultMap">
+    select * from HOS_BUCKET where
+    BUCKET_NAME=${symbol_pound}{bucketName}
+  </select>
+
+    <select id="getBucketByCreator" resultMap="BucketResultMap">
+    select * from HOS_BUCKET where
+    CREATOR=${symbol_pound}{creator}
+  </select>
+
+    <select id="getUserAuthorizedBuckets" resultMap="BucketResultMap">
+    select b.* from HOS_BUCKET b,SERVICE_AUTH s where
+    s.TARGET_TOKEN=${symbol_pound}{token} and s.BUCKET_NAME=b.BUCKET_NAME
+  </select>
+</mapper>

@@ -34,6 +34,7 @@
       <includes>
         <include>.gitignore</include>
         <include>.gitlab-ci.yml</include>
+        <include>.travis.yml</include>
         <include>CHANGELOG.md</include>
         <include>CONTRIBUTING.md</include>
         <include>Copyright.md</include>
@@ -43,6 +44,7 @@
         <include>LICENSE.md</include>
         <include>process.png</include>
         <include>README.md</include>
+        <include>samples-parent.iml</include>
       </includes>
     </fileSet>
   </fileSets>
@@ -72,6 +74,30 @@
           <includes>
             <include>.gitignore</include>
             <include>.gitlab-ci.yml</include>
+            <include>samples-core.iml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="samples-cache" dir="samples-cache" name="samples-cache">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>.gitignore</include>
+            <include>samples-cache.iml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -84,6 +110,7 @@
             <include>.gitignore</include>
             <include>.gitlab-ci.yml</include>
             <include>README.md</include>
+            <include>samples-mdm.iml</include>
             <include>samples_mdm.sql</include>
           </includes>
         </fileSet>
@@ -107,11 +134,12 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
+                <include>mdm-common.iml</include>
               </includes>
             </fileSet>
           </fileSets>
         </module>
-        <module id="mdm-client" dir="mdm-client" name="mdm-client">
+        <module id="mdm-feign" dir="mdm-feign" name="mdm-feign">
           <fileSets>
             <fileSet filtered="true" packaged="true" encoding="UTF-8">
               <directory>src/main/java</directory>
@@ -129,11 +157,12 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
+                <include>mdm-feign.iml</include>
               </includes>
             </fileSet>
           </fileSets>
         </module>
-        <module id="mdm-server" dir="mdm-server" name="mdm-server">
+        <module id="mdm-web" dir="mdm-web" name="mdm-web">
           <fileSets>
             <fileSet filtered="true" packaged="true" encoding="UTF-8">
               <directory>src/main/java</directory>
@@ -170,6 +199,140 @@
               <includes>
                 <include>.gitignore</include>
                 <include>Dockerfile</include>
+                <include>mdm-web.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+      </modules>
+    </module>
+    <module id="samples-oss" dir="samples-oss" name="samples-oss">
+      <fileSets>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>samples-oss.iml</include>
+            <include>samples_oss.sql</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+      <modules>
+        <module id="oss-common" dir="oss-common" name="oss-common">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>oss-common.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="oss-core" dir="oss-core" name="oss-core">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.xml</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>oss-core.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="oss-api" dir="oss-api" name="oss-api">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>oss-api.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="oss-mybatis" dir="oss-mybatis" name="oss-mybatis">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/test/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+              <directory>src/test/resources</directory>
+              <includes>
+                <include>**/*.properties</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>oss-mybatis.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="oss-server" dir="oss-server" name="oss-server">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.xml</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>oss-server.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="oss-web" dir="oss-web" name="oss-web">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>oss-web.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -184,6 +347,7 @@
             <include>.gitignore</include>
             <include>.gitlab-ci.yml</include>
             <include>README.md</include>
+            <include>samples-user.iml</include>
             <include>samples_user.sql</include>
           </includes>
         </fileSet>
@@ -213,11 +377,12 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
+                <include>user-common.iml</include>
               </includes>
             </fileSet>
           </fileSets>
         </module>
-        <module id="user-client" dir="user-client" name="user-client">
+        <module id="user-feign" dir="user-feign" name="user-feign">
           <fileSets>
             <fileSet filtered="true" packaged="true" encoding="UTF-8">
               <directory>src/main/java</directory>
@@ -235,11 +400,28 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
+                <include>user-feign.iml</include>
               </includes>
             </fileSet>
           </fileSets>
         </module>
-        <module id="user-server" dir="user-server" name="user-server">
+        <module id="user-dubbo" dir="user-dubbo" name="user-dubbo">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>user-dubbo.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="user-web" dir="user-web" name="user-web">
           <fileSets>
             <fileSet filtered="true" packaged="true" encoding="UTF-8">
               <directory>src/main/java</directory>
@@ -257,6 +439,7 @@
               <directory>src/main/resources</directory>
               <includes>
                 <include>**/*.yml</include>
+                <include>**/*.yaml</include>
               </includes>
             </fileSet>
             <fileSet filtered="true" packaged="true" encoding="UTF-8">
@@ -270,6 +453,7 @@
               <includes>
                 <include>.gitignore</include>
                 <include>Dockerfile</include>
+                <include>user-web.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -284,6 +468,7 @@
             <include>.gitignore</include>
             <include>.gitlab-ci.yml</include>
             <include>README.md</include>
+            <include>samples-product.iml</include>
             <include>samples_product.sql</include>
           </includes>
         </fileSet>
@@ -307,11 +492,28 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
+                <include>product-common.iml</include>
               </includes>
             </fileSet>
           </fileSets>
         </module>
-        <module id="product-server" dir="product-server" name="product-server">
+        <module id="product-dubbo" dir="product-dubbo" name="product-dubbo">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>product-dubbo.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="product-web" dir="product-web" name="product-web">
           <fileSets>
             <fileSet filtered="true" packaged="true" encoding="UTF-8">
               <directory>src/main/java</directory>
@@ -323,6 +525,7 @@
               <directory>src/main/resources</directory>
               <includes>
                 <include>**/*.yml</include>
+                <include>**/*.yaml</include>
               </includes>
             </fileSet>
             <fileSet filtered="true" packaged="true" encoding="UTF-8">
@@ -342,11 +545,12 @@
               <includes>
                 <include>.gitignore</include>
                 <include>Dockerfile</include>
+                <include>product-web.iml</include>
               </includes>
             </fileSet>
           </fileSets>
         </module>
-        <module id="product-client" dir="product-client" name="product-client">
+        <module id="product-feign" dir="product-feign" name="product-feign">
           <fileSets>
             <fileSet filtered="true" packaged="true" encoding="UTF-8">
               <directory>src/main/java</directory>
@@ -364,6 +568,7 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
+                <include>product-feign.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -378,6 +583,7 @@
             <include>.gitignore</include>
             <include>.gitlab-ci.yml</include>
             <include>README.md</include>
+            <include>samples-order.iml</include>
             <include>samples_order.sql</include>
           </includes>
         </fileSet>
@@ -395,11 +601,28 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
+                <include>order-common.iml</include>
               </includes>
             </fileSet>
           </fileSets>
         </module>
-        <module id="order-client" dir="order-client" name="order-client">
+        <module id="order-dubbo" dir="order-dubbo" name="order-dubbo">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+              <directory></directory>
+              <includes>
+                <include>order-dubbo.iml</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+        </module>
+        <module id="order-feign" dir="order-feign" name="order-feign">
           <fileSets>
             <fileSet filtered="true" packaged="true" encoding="UTF-8">
               <directory>src/main/java</directory>
@@ -417,11 +640,12 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
+                <include>order-feign.iml</include>
               </includes>
             </fileSet>
           </fileSets>
         </module>
-        <module id="order-server" dir="order-server" name="order-server">
+        <module id="order-web" dir="order-web" name="order-web">
           <fileSets>
             <fileSet filtered="true" packaged="true" encoding="UTF-8">
               <directory>src/main/java</directory>
@@ -432,6 +656,7 @@
             <fileSet encoding="UTF-8">
               <directory>src/main/resources</directory>
               <includes>
+                <include>**/*.xsd</include>
                 <include>**/*.yml</include>
               </includes>
             </fileSet>
@@ -446,6 +671,7 @@
               <includes>
                 <include>.gitignore</include>
                 <include>Dockerfile</include>
+                <include>order-web.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -478,6 +704,7 @@
             <include>.gitignore</include>
             <include>Dockerfile</include>
             <include>README.md</include>
+            <include>samples-bpm.iml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -509,6 +736,7 @@
             <include>.gitlab-ci.yml</include>
             <include>Dockerfile</include>
             <include>README.md</include>
+            <include>samples-admin.iml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -520,6 +748,7 @@
           <includes>
             <include>.gitignore</include>
             <include>README.md</include>
+            <include>samples-data-process.iml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -548,6 +777,7 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
+                <include>data-process-batch.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -576,6 +806,7 @@
               <directory></directory>
               <includes>
                 <include>.gitignore</include>
+                <include>data-process-streaming.iml</include>
               </includes>
             </fileSet>
           </fileSets>
@@ -609,6 +840,7 @@
             <include>.gitlab-ci.yml</include>
             <include>Dockerfile</include>
             <include>README.md</include>
+            <include>samples-eureka.iml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -624,7 +856,7 @@
         <fileSet encoding="UTF-8">
           <directory>src/main/resources</directory>
           <includes>
-            <include>**/*.json</include>
+            <include>**/*.jks</include>
             <include>**/*.yml</include>
           </includes>
         </fileSet>
@@ -640,6 +872,7 @@
             <include>.gitignore</include>
             <include>Dockerfile</include>
             <include>README.md</include>
+            <include>samples-gateway.iml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -671,6 +904,7 @@
             <include>.gitlab-ci.yml</include>
             <include>Dockerfile</include>
             <include>README.md</include>
+            <include>samples-hystrix-dashboard.iml</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -687,6 +921,7 @@
           <directory>src/main/resources</directory>
           <includes>
             <include>**/*.yml</include>
+            <include>**/*.yaml</include>
           </includes>
         </fileSet>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
@@ -702,6 +937,7 @@
             <include>.gitlab-ci.yml</include>
             <include>Dockerfile</include>
             <include>README.md</include>
+            <include>samples-zuul.iml</include>
           </includes>
         </fileSet>
       </fileSets>

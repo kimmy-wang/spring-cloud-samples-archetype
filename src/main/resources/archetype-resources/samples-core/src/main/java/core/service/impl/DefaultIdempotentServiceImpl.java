@@ -30,10 +30,12 @@
 package ${package}.core.service.impl;
 
 import ${package}.core.service.IdempotentService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DefaultIdempotentServiceImpl implements IdempotentService {
     @Override
-    public boolean invoke() {
+    public boolean isIdempotent() {
         return false;
     }
 }

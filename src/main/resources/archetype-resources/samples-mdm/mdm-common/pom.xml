@@ -8,7 +8,6 @@
     </parent>
     <groupId>${groupId}.mdm</groupId>
     <artifactId>${artifactId}</artifactId>
-    <version>${version}</version>
     <name>${artifactId}</name>
     <description>主数据公用模块</description>
 
@@ -26,11 +25,6 @@
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
         </dependency>
 
         <dependency>

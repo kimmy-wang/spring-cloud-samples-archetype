@@ -30,7 +30,6 @@
 package ${package}.order.common.entity;
 
 import ${package}.core.validation.constraints.StringLength;
-import lombok.Data;
 
 import javax.validation.constraints.Min;
 import java.io.Serializable;
@@ -40,7 +39,6 @@ import java.io.Serializable;
  *
  * @author WANGY
  */
-@Data
 public class OrderDetailInput implements Serializable {
     private static final long serialVersionUID = 3688737926170402152L;
 
@@ -55,4 +53,20 @@ public class OrderDetailInput implements Serializable {
      */
     @Min(value = 1, message = "购买商品数量不能小于{value}")
     private Long productQuantity;
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public Long getProductQuantity() {
+        return productQuantity;
+    }
+
+    public void setProductQuantity(Long productQuantity) {
+        this.productQuantity = productQuantity;
+    }
 }

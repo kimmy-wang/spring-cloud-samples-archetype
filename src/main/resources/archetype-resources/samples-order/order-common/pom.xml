@@ -8,7 +8,6 @@
     </parent>
     <groupId>${groupId}.order</groupId>
     <artifactId>${artifactId}</artifactId>
-    <version>${version}</version>
     <name>${artifactId}</name>
     <description>订单公用模块</description>
 
@@ -19,18 +18,13 @@
         </dependency>
 
         <dependency>
-            <groupId>${groupId}</groupId>
+            <groupId>com.upcwangying.cloud.samples</groupId>
             <artifactId>samples-core</artifactId>
         </dependency>
 
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 
