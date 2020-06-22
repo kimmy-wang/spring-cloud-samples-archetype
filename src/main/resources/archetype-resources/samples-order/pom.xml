@@ -29,27 +29,27 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>com.upcwangying.cloud.samples</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>samples-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.upcwangying.cloud.samples.order</groupId>
+                <groupId>${groupId}.order</groupId>
                 <artifactId>order-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.upcwangying.cloud.samples.order</groupId>
+                <groupId>${groupId}.order</groupId>
                 <artifactId>order-dubbo</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.upcwangying.cloud.samples.product</groupId>
+                <groupId>${groupId}.product</groupId>
                 <artifactId>product-feign</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.upcwangying.cloud.samples.product</groupId>
+                <groupId>${groupId}.product</groupId>
                 <artifactId>product-dubbo</artifactId>
                 <version>${project.version}</version>
             </dependency>

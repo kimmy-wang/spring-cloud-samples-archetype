@@ -39,13 +39,13 @@
             </dependency>
 
             <dependency>
-                <groupId>com.upcwangying.cloud.samples</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>samples-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.upcwangying.cloud.samples.user</groupId>
+                <groupId>${groupId}.user</groupId>
                 <artifactId>user-common</artifactId>
                 <version>${project.version}</version>
             </dependency>

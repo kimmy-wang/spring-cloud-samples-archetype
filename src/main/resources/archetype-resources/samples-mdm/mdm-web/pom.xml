@@ -13,12 +13,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.upcwangying.cloud.samples</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>samples-core</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.upcwangying.cloud.samples.mdm</groupId>
+            <groupId>${groupId}.mdm</groupId>
             <artifactId>mdm-common</artifactId>
         </dependency>
 
@@ -159,7 +159,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.upcwangying.cloud.samples.user.web.UserServerApplication</mainClass>
+                    <mainClass>${groupId}.user.web.UserServerApplication</mainClass>
                 </configuration>
             </plugin>
 

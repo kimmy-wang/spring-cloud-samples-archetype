@@ -18,14 +18,14 @@
         <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>com.upcwangying.cloud.samples.oss</groupId>
+      <groupId>${groupId}.oss</groupId>
       <artifactId>oss-core</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>
     </dependency>
 
     <dependency>
-      <groupId>com.upcwangying.cloud.samples.oss</groupId>
+      <groupId>${groupId}.oss</groupId>
       <artifactId>oss-common</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>

@@ -13,12 +13,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.upcwangying.cloud.samples</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>samples-core</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.upcwangying.cloud.samples.order</groupId>
+            <groupId>${groupId}.order</groupId>
             <artifactId>order-common</artifactId>
         </dependency>
 

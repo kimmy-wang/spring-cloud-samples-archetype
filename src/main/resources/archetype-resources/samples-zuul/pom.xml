@@ -13,7 +13,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.upcwangying.cloud.samples.user</groupId>
+            <groupId>${groupId}.user</groupId>
             <artifactId>user-feign</artifactId>
         </dependency>
 
@@ -141,7 +141,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.upcwangying.cloud.samples</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>samples-core</artifactId>
         </dependency>
     </dependencies>
@@ -188,7 +188,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.upcwangying.cloud.samples.zuul.SamplesZuulApplication</mainClass>
+                    <mainClass>${groupId}.zuul.SamplesZuulApplication</mainClass>
                 </configuration>
             </plugin>
 
